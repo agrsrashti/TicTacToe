@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(248, 82, 82);
+}
+nav{
+    background-color: black;
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto',sans-serif;
+}
+nav a{
+    list-style-type:none ;
+}
+nav .last{
+    margin-left: auto;
+}
+.gameContainer{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(235, 204, 163);
+}
+.gameInfo{
+    margin-top: 25px;
+    padding: 4px 34px;
+    font-family:cursive;
+}
+.info{
+    font-size: 20px;
+}
+.imgbox img{
+    width: 0;
+    
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.gameInfo h1{
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+#reset{
+    margin: 0 23px;
+    padding: 1px 18px;
+    background-color: rgb(181, 204, 253);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width .5s ease-in-out;
+    z-index: 4;
+}
+@media screen and (max-width: 900px)
+{
+    .gameContainer{
+        flex-wrap:wrap;
+    }
+    .gameInfo{
+        margin-top: 25px;
+    }
+    .gameInfo{
+        font-size: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,18vw);
+        grid-template-columns: repeat(3,18vw);
+    }
+    .line{
+        display: none;
+    }
+}
